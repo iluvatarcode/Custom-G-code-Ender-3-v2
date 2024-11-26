@@ -2,13 +2,13 @@
 Custom g-code for a ender 3 v2 with autoleveling. 
 
 ; Ender 3 Custom Start G-code
-M190 S60 ; pre-heat bed for abl 
 M104 S180 ; start warming extruder to 180
+M190 S60 ; preheat bed for abl
 G28 ; home
-G29 ; abl
-M40; So it uses the mesh
+;G29  abl if needed
+M40; Use mesh redundant.
 ;*** Start Preheating ***
-M190 S{material_bed_temperature_layer_0} ; heat to setting 
+M190 S{material_bed_temperature_layer_0} ; heat to setting
 M109 S{material_print_temperature_layer_0} ﻿T0 ; heat to setting
 ;*** End Preheating ***
 G92 E0 ; Reset Extruder
