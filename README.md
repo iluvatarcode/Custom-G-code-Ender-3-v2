@@ -23,3 +23,21 @@ G92 E0 ; Reset Extruder
 G0 X2.0 Y20 Z0.3 F5000.0 ; Changed x-coordinate of this move
 G0 X2.0 Y200.0 Z0.3 F1500.0 ; Big long wipe, parallel to other lines
 G0 Z2.0 F3000 ; Lift to not scratch when moving to real start of job
+
+
+
+//_______________________
+; Ender 3 Custom End G-code
+G91 ;Relative positioning
+G1 E-2 F2700 ;Retract a bit
+G1 E-2 Z0.2 F2400 ;Retract and raise Z
+G1 X5 Y5 F3000 ;Wipe out
+G1 Z10 ;Raise Z more
+G90 ;Absolute positioning
+
+G1 X0 Y0 ;Y{machine_depth} Present print
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+
+M84 X Y E ;Disable all steppers but Z
