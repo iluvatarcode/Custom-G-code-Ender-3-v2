@@ -5,7 +5,7 @@ Custom g-code for a ender 3 v2 with autoleveling.
 M104 S180 ; start warming extruder to 180
 M190 S60 ; preheat bed for abl
 G28 ; home
-;G29  abl if needed
+;G29  abl if needed 
 M40; Use mesh redundant.
 ;*** Start Preheating ***
 M190 S{material_bed_temperature_layer_0} ; heat to setting
@@ -22,7 +22,7 @@ G92 E0 ; Reset Extruder
 ; G0 Z2.0 F3000 ; Commented out default move
 G0 X2.0 Y20 Z0.3 F5000.0 ; Changed x-coordinate of this move
 G0 X2.0 Y200.0 Z0.3 F1500.0 ; Big long wipe, parallel to other lines
-G0 Z2.0 F3000 ; Lift to not scratch when moving to real start of job
+G0 Z2.0 F1500 ; Lift to not scratch when moving to real start of job
 
 
 
