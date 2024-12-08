@@ -2,7 +2,7 @@
 Custom g-code for a ender 3 v2 with autoleveling. 
 
 ; Ender 3 Custom Start G-code
-M104 S180 ; start warming extruder to 180
+M104 S195 ; start warming extruder to 195
 M190 S60 ; preheat bed for abl
 G28 ; home
 ;G29  abl if needed (auto bed leveling)
