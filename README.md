@@ -39,3 +39,9 @@ M104 S0 ;Turn-off hotend
 M140 S0 ;Turn-off bed
 
 M84 X Y E ;Disable all steppers but Z
+
+
+__________________
+
+Important settings
+Retraction retract speed 40mm/s
